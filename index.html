@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Etch-a-Sketch!</title>
+</head>
+<body>
+    <h1>Etch-a-Sketch</h1>
+    <div><button id='btn'>Clear</button></div>
+    <div id="container"></div>
+    
+<script>
+    var num = prompt("Grid size?")
+    var container = document.querySelector('#container')
+    function createGrid(x){
+        var width = 960
+        
+        for(let i = 0; i < x; i++){
+            var row = document.createElement('div')
+            container.appendChild(row)
+            for(let j = 0; j < x; j++){
+                var box = document.createElement('div')
+                box.classList.add('box')
+                var size = (400/x).toString()
+                box.setAttribute('style',`height: ${size}px;width: ${size}px;`)
+                console.log(width/x)
+                row.appendChild(box)
+            }
+        }
+    }
+    createGrid(num)
+   
+    var elements = document.querySelectorAll('.box')
+    elements.forEach(box => box.addEventListener('mouseover', (e)=>{
+        color =  Math.floor(Math.random()*16777215).toString(16);
+        e.target.style.backgroundColor = `#${color}`
+    }))
+
+    var btn = document.querySelector('#btn')
+    btn.addEventListener('click', clear)
+
+    function clear(){
+        location.reload()
+    }
+    
+    
+</script>

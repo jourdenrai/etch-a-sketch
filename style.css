@@ -1,0 +1,32 @@
+html{
+    text-align: center;
+    background-color: #111;
+    color: grey;
+}
+#container{
+    display: inline-block;
+    height: 25%;
+    width: 960px;
+    white-space: none;
+}
+button{
+    margin-bottom: 20px;
+    border: none;
+    background-color: #222;
+    color: grey;
+    font-size: 20px;
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+}
+h1{
+    font-size: 40px;
+}
+.box{
+    display: inline-block;
+    background-color: black; 
+    margin: .5px;
+}
+.color{
+    background-color: blue;
+}
