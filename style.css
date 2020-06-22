@@ -1,31 +1,49 @@
 html{
     text-align: center;
     background-color: #111;
-    color: grey;
+    color: lightgrey;
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+}
+body{
+    justify-content: center;
 }
 #container{
     display: inline-block;
     height: 25%;
-    width: 960px;
+    width: 500px;
     white-space: none;
+    font-size: 0;
+    font-family: 'Indie Flower', cursive;
+}
+#top{
+    display: block;
+    margin: auto;
+    width: 25%;
+    text-align: left;
+}
+p{
+    text-align: left;
+    
 }
 button{
     margin-bottom: 20px;
     border: none;
     background-color: #222;
-    color: grey;
+    color: white;
     font-size: 20px;
     height: 40px;
-    width: 80px;
+    width: auto;
     border-radius: 5px;
+    font-family: 'Indie Flower', cursive;
 }
 h1{
     font-size: 40px;
+    font-weight: bold;
 }
 .box{
     display: inline-block;
     background-color: black; 
-    margin: .5px;
 }
 .color{
     background-color: blue;

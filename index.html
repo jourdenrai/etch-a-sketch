@@ -3,14 +3,22 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <title>Etch-a-Sketch!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <h1>Etch-a-Sketch</h1>
-    <div><button id='btn'>Clear</button></div>
+    <div id="top"><h1>Etch-a-Sketch!</h1></div>
+    
+    <div id="top">
+        <p>1. Enter number for grid size</p>
+        <p>2. Drag your cursor over the squares</p>
+        <p>3. Press clear to start over and select a new grid size</p>
+    </div>
+    <div id="top"><button id='btn'>Clear</button></div>
     <div id="container"></div>
     
 <script>
-    var num = prompt("Grid size?")
+    
+    var num = prompt("Enter a number: ")
     var container = document.querySelector('#container')
     function createGrid(x){
         var width = 960
@@ -21,9 +29,8 @@
             for(let j = 0; j < x; j++){
                 var box = document.createElement('div')
                 box.classList.add('box')
-                var size = (400/x).toString()
+                var size = (500/x).toString()
                 box.setAttribute('style',`height: ${size}px;width: ${size}px;`)
-                console.log(width/x)
                 row.appendChild(box)
             }
         }
